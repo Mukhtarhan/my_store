@@ -42,6 +42,7 @@ dependencies {
     val navVersion = "2.7.7"
     val roomVersion = "2.6.1"
 
+
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
@@ -52,5 +53,7 @@ dependencies {
 
     implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
     implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
+
+
 
 }
