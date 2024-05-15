@@ -24,9 +24,4 @@
         android:name="com.example.myapplication.UserFragment"
         android:label="fragment_user"
         tools:layout="@layout/fragment_user" />
-    <fragment
-        android:id="@+id/settingsFragment3"
-        android:name="com.example.myapplication.SettingsFragment"
-        android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" />
 </navigation>
