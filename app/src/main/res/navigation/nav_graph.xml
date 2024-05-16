@@ -6,22 +6,22 @@
     app:startDestination="@id/homeFragment3">
     <fragment
         android:id="@+id/homeFragment3"
-        android:name="com.example.myapplication.HomeFragment"
+        android:name="com.example.myapplication.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/cartFragment3"
-        android:name="com.example.myapplication.CartFragment"
+        android:name="com.example.myapplication.fragments.CartFragment"
         android:label="fragment_cart"
         tools:layout="@layout/fragment_cart" />
     <fragment
         android:id="@+id/favoritesFragment3"
-        android:name="com.example.myapplication.FavoritesFragment"
+        android:name="com.example.myapplication.fragments.FavoritesFragment"
         android:label="fragment_favorites"
         tools:layout="@layout/fragment_favorites" />
     <fragment
         android:id="@+id/userFragment3"
-        android:name="com.example.myapplication.UserFragment"
+        android:name="com.example.myapplication.fragments.UserFragment"
         android:label="fragment_user"
         tools:layout="@layout/fragment_user" />
 </navigation>
