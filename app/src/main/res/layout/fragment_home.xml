@@ -49,7 +49,7 @@
             android:src="@drawable/ic_baseline_search_24" />
     </LinearLayout>
     <TextView
-        android:id="@+id/tv_would_like_to_eat"
+        android:id="@+id/tv_would_like_to_buy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -60,7 +60,7 @@
         app:layout_constraintStart_toStartOf="@+id/header"
         app:layout_constraintTop_toBottomOf="@id/header" />
     <androidx.cardview.widget.CardView
-        android:id="@+id/random_meal"
+        android:id="@+id/randomProductCard"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginStart="25dp"
@@ -71,10 +71,10 @@
         app:cardUseCompatPadding="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_would_like_to_eat">
+        app:layout_constraintTop_toBottomOf="@id/tv_would_like_to_buy">
 
         <ImageView
-            android:id="@+id/img_random_meal"
+            android:id="@+id/imgRandomProduct"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
@@ -90,11 +90,11 @@
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/tv_would_like_to_eat"
-        app:layout_constraintTop_toBottomOf="@id/random_meal" />
+        app:layout_constraintStart_toStartOf="@id/tv_would_like_to_buy"
+        app:layout_constraintTop_toBottomOf="@id/randomProductCard" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rec_view_meals_popular"
+        android:id="@+id/rec_view_products_popular"
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:layout_marginStart="25dp"
@@ -110,8 +110,8 @@
                 android:textColor="@color/black"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@id/rec_view_meals_popular"
-                app:layout_constraintTop_toBottomOf="@id/rec_view_meals_popular" />
+                app:layout_constraintStart_toStartOf="@id/rec_view_products_popular"
+                app:layout_constraintTop_toBottomOf="@id/rec_view_products_popular" />
             <androidx.cardview.widget.CardView
                 android:id="@+id/category_card"
                 android:layout_width="match_parent"

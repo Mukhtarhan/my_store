@@ -10,4 +10,6 @@
     <string name="favorites">favorites</string>
     <string name="profile">profile</string>
     <string name="settings">settings</string>
+    <string name="product_image_description">Product Image</string>
+    <string name="category_bee">Category : Bee</string>
 </resources>
