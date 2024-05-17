@@ -48,7 +48,7 @@ class HomeFragment : Fragment() {
             override fun onChanged(value: Product) {
                 Glide.with(this@HomeFragment)
                     .load(value.image)
-                    .into(binding.imgRandomMeal)
+                    .into(binding.imgRandomProduct)
             }
         })
     }
