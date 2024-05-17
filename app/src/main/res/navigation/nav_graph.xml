@@ -16,7 +16,7 @@
         tools:layout="@layout/fragment_cart" />
     <fragment
         android:id="@+id/favoritesFragment3"
-        android:name="com.example.myapplication.fragments.FavoritesFragment"
+        android:name="com.example.myapplication.fragments.FavoriteMealsFragment"
         android:label="fragment_favorites"
         tools:layout="@layout/fragment_favorites" />
     <fragment

@@ -6,19 +6,23 @@ import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.example.myapplication.R
+import com.example.myapplication.databinding.ActivityMainBinding
+import androidx.core.content.ContextCompat
+import androidx.fragment.app.FragmentTransaction
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
+
 
 class MainActivity : AppCompatActivity() {
+    lateinit var binding:ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-//        val viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
-//
-//        viewModel.loadProducts()
-
-        val bottomNavigation = findViewById<BottomNavigationView>(R.id.btm_nav)
-        val navController = Navigation.findNavController(this, R.id.host_fragment)
+        val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        val navController = Navigation.findNavController(this,R.id.frag_host)
         NavigationUI.setupWithNavController(bottomNavigation,navController)
-    }
 
+    }
 }
