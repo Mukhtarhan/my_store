@@ -42,7 +42,9 @@ dependencies {
     implementation("com.google.android.gms:play-services-analytics-impl:18.0.4")
     val navVersion = "2.7.7"
     val roomVersion = "2.6.1"
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    val lifecycle_version = "2.8.0"
+
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("androidx.core:core-ktx:1.13.1")
@@ -55,10 +57,14 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
     implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.0")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.0")
-    implementation("androidx.arch.lifecycle:extensions:1.1.1")
-    implementation("androidx.room:room-runtime:$roomVersion")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+
+    // ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version")
+
+    implementation("androidx.lifecycle:lifecycle-extensions:2.1.0")
 
 
 }
