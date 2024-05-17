@@ -1,16 +1,16 @@
 package com.example.myapplication.fragments
 
-import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import com.bumptech.glide.Glide
-import com.example.myapplication.activites.MainActivity
 import com.example.myapplication.databinding.FragmentHomeBinding
+<<<<<<< HEAD
 import com.example.myapplication.model.Meal
 import com.example.myapplication.viewModel.HomeViewModel
 
@@ -29,10 +29,24 @@ class HomeFragment : Fragment() {
 
     }
 
+=======
+import com.example.myapplication.model.Product
+import com.example.myapplication.network.ApiClient
+import com.example.myapplication.videoModal.HomeViewModal
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+
+
+class HomeFragment : Fragment() {
+    private lateinit var binding: FragmentHomeBinding
+    private lateinit var homeMvvm: HomeViewModal
+    private var productList: List<Product> = mutableListOf()
+>>>>>>> ae37d2b195f299518e9a21bb18e0d9f037201f0e
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        homeMvvm = ViewModelProvider(this).get(HomeViewModel::class.java)
+        homeMvvm = ViewModelProviders.of(this)[HomeViewModal::class.java]
     }
 
     override fun onCreateView(
@@ -46,10 +60,11 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        homeMvvm.getRandomProduct()
-        observeRandomProduct()
-        onRandomProductClick()
+        homeMvvm.getOverviewProduct()
+        observeOverviewProduct()
+
     }
+<<<<<<< HEAD
 
     private fun onRandomProductClick() {
         binding.randomProductCard.setOnClickListener {
@@ -65,8 +80,13 @@ class HomeFragment : Fragment() {
     private fun observeRandomProduct() {
         homeMvvm.observeRandomProductLivedata().observe(viewLifecycleOwner, Observer { value ->
             if (value.images.isNotEmpty()) {
+=======
+    private fun observeOverviewProduct() {
+        homeMvvm.observeLiveData().observe(viewLifecycleOwner, object :Observer<Product>{
+            override fun onChanged(value: Product) {
+>>>>>>> ae37d2b195f299518e9a21bb18e0d9f037201f0e
                 Glide.with(this@HomeFragment)
-                    .load(value.images[0])
+                    .load(value.image)
                     .into(binding.imgRandomProduct)
 //
 //                this.randomProduct = value
