@@ -16,9 +16,4 @@
         android:icon="@drawable/user"
         android:id="@+id/userFragment3"/>
 
-    <item android:title="@string/settings"
-        android:id="@+id/settingsFragment3"
-        android:icon="@drawable/settings"
-         />
-
 </menu>
